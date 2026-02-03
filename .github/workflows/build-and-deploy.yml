@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+env:
+  REACT_APP_API_URL: https://as-app-dev-cin-01-hbhdegc5bqddaga7.centralindia-01.azurewebsites.net/api
+  REACT_APP_AZURE_FUNCTION_URL: https://func-app-dev-01-cuh6h4erhdazb9g6.centralindia-01.azurewebsites.net/api/orders
+
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
