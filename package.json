@@ -1,0 +1,17 @@
+{
+  "name": "azure-node-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "install-all": "npm install --prefix app-node-service && npm install --prefix react-typescript",
+    "build": "npm run build --prefix react-typescript",
+    "test": "npm test --prefix app-node-service && npm test --prefix react-typescript",
+    "start": "npm run start --prefix app-node-service",
+    "start:dev": "npm run start:dev --prefix app-node-service",
+    "start:prod": "npm start:prod --prefix app-node-service"
+  }
+}
