@@ -18,11 +18,26 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install react and node dependencies
+#------------------- REACT ---------------------
+      - name: Install react dependencies
+        working-directory: react-typescript
         run: npm install
 
-      - name: Build app
-        run: npm run build --if-present
+      - name: Build react app
+        working-directory: react-typescript
+        run: npm run build
+
+      - name: Copy React build to Node public folder
+        run: |
+          rm -rf app-node-service/public
+          mkdir -p app-node-service/public
+          cp -r react-typescript/build/* app-node-service/public/
+
+#--------------------- NODE -----------------------------
+     
+      - name: Install node dependencies
+        working-directory: app-node-service
+        run: npm install
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
