@@ -21,7 +21,7 @@ jobs:
 #------------------- REACT ---------------------
       - name: Install react dependencies
         working-directory: react-typescript
-        run: npm install
+        run: npm ci
 
       - name: Build react app
         working-directory: react-typescript
@@ -37,7 +37,7 @@ jobs:
      
       - name: Install node dependencies
         working-directory: app-node-service
-        run: npm install
+        run: npm ci
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
