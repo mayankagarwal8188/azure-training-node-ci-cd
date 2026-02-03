@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && xcopy build ..\\app-node-service\\public /E /I /Y",
+    "build": "react-scripts build",
+    "local-build": "react-scripts build && xcopy build ..\\app-node-service\\public /E /I /Y",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
