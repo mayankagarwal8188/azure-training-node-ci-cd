@@ -7,7 +7,7 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "install-all": "npm install --prefix app-node-service && npm install --prefix react-typescript",
+    "install": "npm install --prefix app-node-service && npm install --prefix react-typescript",
     "build": "npm run build --prefix react-typescript",
     "test": "npm test --prefix app-node-service && npm test --prefix react-typescript",
     "start": "npm run start --prefix app-node-service",
