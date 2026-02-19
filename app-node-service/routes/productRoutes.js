@@ -27,7 +27,7 @@ router.get("/:id/image", (req, res) => {
     }
 
     const accountName = process.env.AZURE_STORAGE_ACCOUNT_NAME;
-    const accountKey = process.env.AZURE_STORAGE_ACCOUNT_KEY;
+    const accountKey = req.blobSecret;
     const containerName = process.env.AZURE_CONTAINER_NAME;
 
     const sharedKeyCredential = new StorageSharedKeyCredential(
